@@ -9,7 +9,7 @@
 <script>
 import Card from './Card.vue';
 export default {
-    name: 'CardDeck',
+    name: 'Deck',
     components: { Card },
     data() {
         return {
