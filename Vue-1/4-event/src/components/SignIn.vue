@@ -7,13 +7,14 @@
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
       <!-- Form -->
-      <form class="text-center" style="color: #757575" action="#!">
+      <form class="text-center" style="color: #757575" @submit.prevent='handleSubmit'>
         <!-- Email -->
         <div class="md-form">
           <input
             type="email"
             id="materialLoginFormEmail"
             class="form-control"
+            ref='email' @keyup='handleChange'
           />
           <label for="materialLoginFormEmail">E-mail</label>
         </div>
@@ -24,6 +25,7 @@
             type="password"
             id="materialLoginFormPassword"
             class="form-control"
+            v-model="password"
           />
           <label for="materialLoginFormPassword">Password</label>
         </div>
@@ -55,6 +57,8 @@
         >
           Sign in
         </button>
+        <div>{{email}}</div>
+        <div>{{password}}</div>
       </form>
       <!-- Form -->
     </div>
@@ -62,7 +66,28 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: 'Hej',
+      password: 'HejHej'
+    }
+  },
+  methods: {
+    handleChange() {
+      console.log(this.$refs.email.value)
+      this.email = this.$refs.email.value;
+    },
+    handleSubmit() {
+      
+      console.log(this.email, this.password)
+      this.email = ''
+      this.$refs.email.value = ''
+      this.password = ''
+    }
+  }
+};
 </script>
 
-<style></style>
+<style>
+</style>

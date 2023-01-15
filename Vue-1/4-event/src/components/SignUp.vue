@@ -16,7 +16,10 @@
                 type="text"
                 id="materialRegisterFormFirstName"
                 class="form-control"
+                v-on:keyup='logName'
+                
               />
+              <!--v-on:keyup.a kommer bara funka om key är A, event modifiers-->
               <label for="materialRegisterFormFirstName">First name</label>
             </div>
           </div>
@@ -111,7 +114,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    logName(e) {
+      console.log(e.key)
+    }
+  }
+};
 </script>
 
 <style></style>
