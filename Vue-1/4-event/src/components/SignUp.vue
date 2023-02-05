@@ -10,29 +10,8 @@
       <form class="text-center" style="color: #757575" action="#!">
         <div class="form-row">
           <div class="col">
-            <!-- First name -->
-            <div class="md-form">
-              <input
-                type="text"
-                id="materialRegisterFormFirstName"
-                class="form-control"
-                v-on:keyup='logName'
-                
-              />
-              <!--v-on:keyup.a kommer bara funka om key är A, event modifiers-->
-              <label for="materialRegisterFormFirstName">First name</label>
-            </div>
           </div>
           <div class="col">
-            <!-- Last name -->
-            <div class="md-form">
-              <input
-                type="text"
-                id="materialRegisterFormLastName"
-                class="form-control"
-              />
-              <label for="materialRegisterFormLastName">Last name</label>
-            </div>
           </div>
         </div>
 

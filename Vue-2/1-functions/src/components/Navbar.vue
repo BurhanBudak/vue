@@ -10,10 +10,34 @@
 
 <script>
 export default {
+  name: 'navbar',
+  
 
 }
 </script>
 
-<style>
-
+<style scoped >
+  nav{
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  h1{
+    color: #fff
+  }
+  ul{
+    list-style: none;
+    display: flex;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: inline-block;
+  }
+  a:hover{
+    background-color: rgba(0, 0, 0, 0.134);
+  }
 </style>
