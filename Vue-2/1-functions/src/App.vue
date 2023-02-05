@@ -5,8 +5,10 @@
       <h2>{{ message }}</h2>
 
       <Functions />
+      <Input class='mt' />
+      <Computed class="mt"/>
     </div>
-
+    
 
 
 
@@ -19,10 +21,12 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import Functions from './components/Functions.vue'
+import Input from "./components/Input.vue";
+import Computed from './components/Computed.vue';
 export default {
   name: 'App',
-  components: { Navbar, Footer, Functions },
-  data() {
+  components: { Navbar, Footer, Functions, Input, Computed },
+    data() {
     return {
       message: 'Ett meddelande från våran data'
     }
@@ -43,5 +47,9 @@ export default {
 }
 .output{
   min-height: 300px;
+}
+
+.mt {
+  margin-top: 3rem;
 }
 </style>

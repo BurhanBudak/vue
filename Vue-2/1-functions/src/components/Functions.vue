@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button>Add</button>
-    <button>Subtract</button>
+    <button @click='add(1)'>Add</button>
+    <button @click='sub'>Subtract</button>
 
     <h4>Sum: {{ sum }}</h4>
   </div>
@@ -14,7 +14,16 @@ export default {
         return {
             sum: 10
         }
+    },
+    methods: {
+        add(nr) {
+            this.sum += nr
+        },
+        sub() {
+            this.sum --
+        }
     }
+
 }
 </script>
 
